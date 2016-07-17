@@ -1,0 +1,108 @@
+$check_color = #888
+$body_primary_color = #315481
+$body_shadow_color = #918e82
+$header_bg = #d2edf4
+$header_primary_color = #d0edf5
+$header_shadow_color = #e1e5f0
+$list_bg = #eee
+$list_border = #ddd
+
+body
+  background-attachment: fixed
+  background-color: $body_primary_color
+  background-image: linear-gradient(to bottom, $body_primary_color, $body_shadow_color 100%)
+  bottom: 0
+  font-family: sans-serif
+  font-size: 14px
+  left: 0
+  margin: 0
+  padding: 0
+  position: absolute
+  right: 0
+  top: 0
+
+.container
+  background: white
+  margin: 0 auto
+  max-width: 600px
+  min-height: 100%
+
+header
+  &
+    background: $header_bg
+    background-image: linear-gradient(to bottom, $header_primary_color, $header_shadow_color 100%)
+    padding: 20px 15px 15px 15px
+    position: relative
+  .hide-completed
+    float: right
+
+// #login-buttons
+//   display: block
+
+h1
+  display: inline-block
+  font-size: 1.5em
+  margin: 0
+  margin-bottom: 10px
+  margin-right: 1em
+
+form
+  margin-bottom: -10px
+  margin-top: 10px
+  position: relative
+
+.new-task
+  input
+    background: transparent
+    border: none
+    box-sizing: border-box
+    font-size: 1em
+    padding: 10px 0
+    padding-right: 80px
+    width: 100%
+  input:focus
+    outline: 0
+
+ul
+  background: white
+  margin: 0
+  padding: 0
+
+.delete
+  background: none
+  border: none
+  float: right
+  font-size: 1em
+  font-weight: bold
+  position: relative
+
+li
+  &
+    border-bottom: $list_bg solid 1px
+    list-style: none
+    padding: 15px
+    position: relative
+  .text
+    margin-left: 10px
+li.checked
+  color: $check_color
+  .text
+    text-decoration: line-through
+
+.private
+  background: $list_bg
+  border-color: $list_border
+
+.toggle-private
+  margin-left: 5px
+
+@media (max-width: 600px)
+  li
+    padding: 12px 15px
+
+  .search
+    width: 150px
+    clear: both
+
+  .new-task input
+    padding-bottom: 5px
